@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class shurikencollision : MonoBehaviour
 {
+    public GameObject Shuriken1;
+    public GameObject Shuriken2;
+    public GameObject Crush1;
+    public GameObject Crush2;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +23,11 @@ public class shurikencollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            print("eeee");
+            Destroy(Crush1);
+        }
+        if (collision.gameObject.tag == "Enemy2")
+        {
+            Destroy(Crush2);
         }
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - ThrowingObject
   - Collect
   - Collect2
+  - Collectible
+  - Enemy2
   layers:
   - Default
   - TransparentFX

@@ -17,4 +17,9 @@ public class Projectile : MonoBehaviour
     {
         transform.position += direction.offset * Time.deltaTime * speed;
     }
+
+    private void DestroyThrowable()
+    {
+        Destroy(gameObject);
+    }
 }
