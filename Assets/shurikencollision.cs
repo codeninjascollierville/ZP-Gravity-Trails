@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrusherMove : MonoBehaviour
-
+public class shurikencollision : MonoBehaviour
 {
-    public Rigidbody2D rrb;
-    public int minimumYPosition;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +13,13 @@ public class CrusherMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y <= minimumYPosition)
+
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
         {
-            rrb.AddForce(transform.up * 400f);
+            print("eeee");
         }
     }
 }

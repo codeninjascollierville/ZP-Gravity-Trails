@@ -19,7 +19,7 @@ public class GravityFlip : MonoBehaviour
             avatarRigidbody.gravityScale *= -1f;
             Vector3 newDirection = transform.localScale;
             newDirection.y *= -1;
-            transform.localScale = newDirection.;
+            transform.localScale = newDirection;
         }
     }
 }
