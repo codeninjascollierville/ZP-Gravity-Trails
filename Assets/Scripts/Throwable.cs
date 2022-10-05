@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Throwable : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Throwable : MonoBehaviour
     public Vector3 offset;
     public GameObject s1;
     public GameObject s2;
+    public Text collectableCounter;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +26,7 @@ public class Throwable : MonoBehaviour
             offset = transform.localScale.x * new Vector3(1, 0, 0);
             Vector3 throwablePosition = transform.position + offset;
             Instantiate(objectThrown, throwablePosition, transform.rotation);
-            sleep 3
-            print("e");
-            
-
+            collectableCounter.text = "0";
         }
 
     }
@@ -36,6 +35,7 @@ public class Throwable : MonoBehaviour
         if (collision.gameObject.tag == "Collect")
         {
             shurikens = 1;
+            collectableCounter.text = "1";
             
         }
 /*        if (collision.gameObject.tag == "Collect2")
