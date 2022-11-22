@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyCollison : MonoBehaviour
+public class GoldPortal1 : MonoBehaviour
 {
-    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,19 +14,15 @@ public class EnemyCollison : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Enemy2")
+        if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Menu");
         }
-        else if(collision.gameObject.tag == "Enemy1")
-        {
-            SceneManager.LoadScene("Level3");
-        }
+
     }
 
 }
